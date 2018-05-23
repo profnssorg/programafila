@@ -2,7 +2,7 @@
 Programa Fila
 Descrição:  Este programa controla as fichas de atendimento de uma fila.
 Autor: Nelson Seixas dos Santos
-Versão: 0.0.1
+Versão: 0.0.2
 Data: 23/05/2018
 """
 
@@ -34,8 +34,13 @@ while True:
         print('Atendimento encerrado')
         print('O número total de clientes atendidos foi: ', atendidos )
         print('Restaram %d clientes não atendidos na fila'%len(clientes))
-        #relatorio = open('relatorio.txt','w')
-        #relatorio.close()
+        relatorio = open('relatorio.txt','w')
+        relatorio.write('Atendimento encerrado.\n')
+        relatorio.write('Foram atendidos %d clientes.'%atendidos)
+        relatorio.write('\nRestaram ')
+        relatorio.write(str(len(clientes)))
+        relatorio.write(' clientes não atendidos na fila.')
+        relatorio.close()
         break
     elif operacao != 'A' or 'E' or 'I':
         print('Esta não é uma operação válida.  Tente novamente.')
