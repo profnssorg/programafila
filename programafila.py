@@ -34,7 +34,8 @@ while True:
         print('Atendimento encerrado')
         print('O número total de clientes atendidos foi: ', atendidos )
         print('Restaram %d clientes não atendidos na fila'%len(clientes))
-        open('relatorio.txt','w')
+        #relatorio = open('relatorio.txt','w')
+        #relatorio.close()
         break
     elif operacao != 'A' or 'E' or 'I':
         print('Esta não é uma operação válida.  Tente novamente.')
